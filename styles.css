@@ -9,5 +9,12 @@ body {
 .grid-container {
     border: 1px solid red;
     width: 960px;
-    height: 400px;
+    height: 960px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cell {
+    border: 1px solid black;
+    box-sizing: border-box;
 }
