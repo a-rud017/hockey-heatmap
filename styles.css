@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.grid-container {
+    border: 1px solid red;
+    width: 960px;
+    height: 400px;
+}
