@@ -9,8 +9,14 @@ function createGrid(size) {
         cell.style.width = `${gridContainerWidth / size}px`;
         cell.style.height = `${gridContainerHeight / size}px`;
 
+        cell.addEventListener('click', shadeCell)
+
         gridContainer.appendChild(cell);
     }
 }
 
-createGrid(8)
+createGrid(16)
+
+function shadeCell(event) {
+    event.target.style.backgroundColor = "red";
+}
