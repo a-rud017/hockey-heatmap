@@ -8,6 +8,7 @@ function createGrid(size) {
         cell.classList.add("cell");
         cell.style.width = `${gridContainerWidth / size}px`;
         cell.style.height = `${gridContainerHeight / size}px`;
+        cell.dataset.clicks = 0;
 
         cell.addEventListener('click', shadeCell)
 
@@ -18,5 +19,9 @@ function createGrid(size) {
 createGrid(16)
 
 function shadeCell(event) {
-    event.target.style.backgroundColor = "red";
+    let clicks = Number(event.target.dataset.clicks);
+    clicks++;
+    event.target.dataset.clicks = clicks;
+
+    event.target.style.backgroundColor = `rgba(255, 0, 0, ${clicks * 0.1})`;
 }
