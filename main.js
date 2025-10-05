@@ -16,7 +16,7 @@ function createGrid(size) {
     }
 }
 
-createGrid(16)
+createGrid(24)
 
 function shadeCell(event) {
     let clicks = Number(event.target.dataset.clicks);
