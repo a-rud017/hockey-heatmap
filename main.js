@@ -25,3 +25,15 @@ function shadeCell(event) {
 
     event.target.style.backgroundColor = `rgba(255, 0, 0, ${clicks * 0.1})`;
 }
+
+const resetButton = document.querySelector(".reset-btn");
+resetButton.addEventListener('click', resetGrid)
+
+function resetGrid() {
+    const cells = document.querySelectorAll(".cell")
+
+    for (let i = 0; i < cells.length - 1; i++) {
+        cells[i].dataset.clicks = 0;
+        cells[i].style.backgroundColor = "";
+    }
+}
