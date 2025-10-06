@@ -32,7 +32,7 @@ resetButton.addEventListener('click', resetGrid)
 function resetGrid() {
     const cells = document.querySelectorAll(".cell")
 
-    for (let i = 0; i < cells.length - 1; i++) {
+    for (let i = 0; i < cells.length; i++) {
         cells[i].dataset.clicks = 0;
         cells[i].style.backgroundColor = "";
     }
